@@ -45,6 +45,7 @@ const useRegistration = () => {
             fieldErrors[error.path[0] as string] = error.message;
           }
         });
+        setMessage(null)
         setErrors(fieldErrors);
       }
     }

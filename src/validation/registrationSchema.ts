@@ -22,8 +22,8 @@ export const registrationSchema = z
       .string()
       .optional()
       .refine(
-        (val) => !val || /^\d+$/.test(val),
-        "Phone number must contain only digits"
+        (val) => !val || /^\d{10}$/.test(val),
+        "Phone number must contain exactly 10 digits"
       ),
     password: z
       .string()
